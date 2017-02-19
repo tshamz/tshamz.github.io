@@ -7,8 +7,8 @@ var optInRepos = [
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
-// - e.g. yo-mama/her-fat-ass from https://github.com/your-mom/her-ass
 var customRepos = [
+  'tshamz/wtfdrink',
   'tshamz/time-is-a-flat-circle',
   'tshamz/a11y-mooc',
   'tshamz/code-standards',
