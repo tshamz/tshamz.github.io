@@ -22,7 +22,6 @@ var customRepos = [
   'tshamz/tylershambora.com',
   'tshamz/socket-to-me-baby',
   'tshamz/free-marketplace-music',
-  'tshamz/jamesbrown',
   'tshamz/gulp-shopify-upload-with-callbacks',
   'tshamz/shopify-frankenstein',
   'tshamz/angular-grade-calculator',
@@ -33,14 +32,9 @@ var customRepos = [
 
 // Custom repo language, different than that defined by GitHub
 var customRepoLanguage = {
-  'liquid': 'Liquid',
-  'Timber': 'Liquid',
-  'skeleton-theme': 'Liquid',
-  'dashing': 'Ruby',
-  'shopify_theme': 'Ruby',
-  'Shopify-Developer-Book': 'Ruby',
-  'offsite-gateway-sim': 'Ruby',
-  'shopify.github.com': 'JavaScript',
+  'a11y-mooc': 'JavaScript',
+  'shopify-frankenstein': 'JavaScript',
+  'socket-to-me-baby': 'JavaScript',
 }
 
 // Custom repo avatars. Dimensions should be 40x40
