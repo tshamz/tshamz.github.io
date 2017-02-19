@@ -1,0 +1,117 @@
+---
+layout: default
+title: Open Source Life Advice - School of Hard Knocks
+description: I'm bored.
+---
+
+<div class="hero">
+  <div class="hero-lines"></div>
+  <header class="hero-header">
+    <div class="pagewidth">
+      <div class="logo--ie">
+        <img src="http://tylershambora.com/images/logo-icon-small.png" alt="Tyler Shambora's Personal Logo" class="logo">
+      </div>
+      <ul class="inline-list git-stats">
+        <li>
+          <span id="countRepos" class="git-stat is-loading"></span> Repos
+        </li>
+        <li>
+          <span id="countMembers" class="git-stat is-loading"></span> Members
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="pagewidth">
+    <div class="hero-inner">
+      <h1 class="hero-text">Open-source is like a box of chocolates. You never know who's gonna get mad at you that day for not doing free work fast enough for them.</h1>
+      <p>All repos released under the <a href="http://www.wtfpl.net">WTFPL license</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="pagewidth">
+  <div class="filter-bar">
+    <div class="button-group js-radio-button-group" id="filters">
+      <div class="filter-bar--left">
+        Show
+      </div>
+      <div class="filter-bar--right">
+        <button class="btn is-active" data-filter="*">All</button>
+        <button class="btn" data-filter=".go">Go</button>
+        <button class="btn" data-filter=".javascript">JavaScript</button>
+        <button class="btn" data-filter=".css">CSS</button>
+        <button class="btn" data-filter=".liquid">HTML</button>
+        <button class="btn" data-filter=".liquid">Liquid</button>
+        <button class="btn" data-filter=":not(.javascript, .css, .html, .liquid)">Other</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="repoWrap">
+  <div class="pagewidth">
+    <div id="repos"></div>
+    <div class="repo-loader">
+      <div class="repo-loader--inner">
+        <div class="spinner spinner-large"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="repoTemplate" type="text/template">
+{% raw %}
+  {{#items}}
+  <div class="repo {{languageClass}}{{#unless description}} no-desc{{/unless}}">
+    <header class="repo-header">
+      <div class="grid">
+        <div class="grid-item large--one-half">
+          <h2>
+          {{#if homepage}}
+            {{#if avatar}}
+              <a href="{{homepage}}" class="homepage-link">
+                <img src="{{avatar}}" alt="{{name}}">
+              </a>
+            {{else}}
+              <a href="{{homepage}}" class="homepage-link">
+                <i class="icon-world"></i>
+              </a>
+            {{/if}}
+            <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
+          {{else}}
+            {{#if avatar}}
+              <img src="{{avatar}}" class="homepage-link" alt="{{name}}">
+            {{/if}}
+            <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+          {{/if}}
+          </h2>
+        </div>
+        <div class="grid-item large--one-half">
+          <div class="repo-meta">
+            <div class="repo-git">
+              <a href="{{url}}" title="View {{name}} on GitHub">
+                <i class="icon-github" title="View on GitHub"></i> Repo
+              </a>
+            </div>
+            <div class="repo-stats">
+              <i class="icon-star" title="Stars"></i> {{stars}}
+              <i class="icon-forks" title="Forks"></i> {{forks}}
+              <span class="repo-lang">{{language}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    {{#if description}}
+    <p>{{description}}</p>
+    {{/if}}
+  </div>
+  {{/items}}
+{% endraw %}
+</script>
+
+<!-- Load Data -->
+<script>
+  var repos = {{ site.github.public_repositories | jsonify }};
+</script>
+

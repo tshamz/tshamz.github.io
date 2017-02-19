@@ -1,0 +1,227 @@
+<!doctype html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+  <title>Open Source Life Advice - School of Hard Knocks</title>
+
+
+
+  <meta name="description" content="I'm bored.">
+
+
+<link rel="canonical" href="http://shopify.github.io">
+
+<meta name="robots" content="index, follow">
+<meta name="st:robots" content="index, follow">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property='st:title' content="Open Source Life Advice - School of Hard Knocks">
+
+<link rel="shortcut icon" href="//cdn.shopify.com/assets/favicon.ico" type="image/x-icon">
+
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+  <link href="css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+
+  </head>
+    <body>
+
+    <div class="hero">
+  <div class="hero-lines"></div>
+  <header class="hero-header">
+    <div class="pagewidth">
+      <div class="logo--ie">
+        <img src="http://tylershambora.com/images/logo-icon-small.png" alt="Tyler Shambora's Personal Logo" class="logo">
+      </div>
+      <ul class="inline-list git-stats">
+        <li>
+          <span id="countRepos" class="git-stat is-loading"></span> Repos
+        </li>
+        <li>
+          <span id="countMembers" class="git-stat is-loading"></span> Members
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="pagewidth">
+    <div class="hero-inner">
+      <h1 class="hero-text">Open-source is like a box of chocolates. You never know who's gonna get mad at you that day for not doing free work fast enough for them.</h1>
+      <p>All repos released under the <a href="http://www.wtfpl.net">WTFPL license</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="pagewidth">
+  <div class="filter-bar">
+    <div class="button-group js-radio-button-group" id="filters">
+      <div class="filter-bar--left">
+        Show
+      </div>
+      <div class="filter-bar--right">
+        <button class="btn is-active" data-filter="*">All</button>
+        <button class="btn" data-filter=".go">Go</button>
+        <button class="btn" data-filter=".javascript">JavaScript</button>
+        <button class="btn" data-filter=".css">CSS</button>
+        <button class="btn" data-filter=".liquid">HTML</button>
+        <button class="btn" data-filter=".liquid">Liquid</button>
+        <button class="btn" data-filter=":not(.javascript, .css, .html, .liquid)">Other</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="repoWrap">
+  <div class="pagewidth">
+    <div id="repos"></div>
+    <div class="repo-loader">
+      <div class="repo-loader--inner">
+        <div class="spinner spinner-large"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="repoTemplate" type="text/template">
+
+  {{#items}}
+  <div class="repo {{languageClass}}{{#unless description}} no-desc{{/unless}}">
+    <header class="repo-header">
+      <div class="grid">
+        <div class="grid-item large--one-half">
+          <h2>
+          {{#if homepage}}
+            {{#if avatar}}
+              <a href="{{homepage}}" class="homepage-link">
+                <img src="{{avatar}}" alt="{{name}}">
+              </a>
+            {{else}}
+              <a href="{{homepage}}" class="homepage-link">
+                <i class="icon-world"></i>
+              </a>
+            {{/if}}
+            <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
+          {{else}}
+            {{#if avatar}}
+              <img src="{{avatar}}" class="homepage-link" alt="{{name}}">
+            {{/if}}
+            <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+          {{/if}}
+          </h2>
+        </div>
+        <div class="grid-item large--one-half">
+          <div class="repo-meta">
+            <div class="repo-git">
+              <a href="{{url}}" title="View {{name}} on GitHub">
+                <i class="icon-github" title="View on GitHub"></i> Repo
+              </a>
+            </div>
+            <div class="repo-stats">
+              <i class="icon-star" title="Stars"></i> {{stars}}
+              <i class="icon-forks" title="Forks"></i> {{forks}}
+              <span class="repo-lang">{{language}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    {{#if description}}
+    <p>{{description}}</p>
+    {{/if}}
+  </div>
+  {{/items}}
+
+</script>
+
+<!-- Load Data -->
+<script>
+  var repos = null;
+</script>
+
+
+
+    <div class="hero-header">
+  <div class="pagewidth grid">
+    <div class="grid-item xlarge--one-half xlarge--text-center">
+      <h2>Work for the man.</h2>
+      <p>
+        Or don't. I don't care and I'm pretty sure he doesn't either. Just make sure you that whoever you go work for, that they're supplying you with some dope nap spots. Doesn't have to be a pod, or some pillow fort thing, just a spot where you can catch a quick 😴. Priorities son.
+      </p>
+    </div>
+    <div class="grid-item xlarge--one-half xlarge--text-center developer-community">
+      <h2>Join a local elderly sports team</h2>
+      <p>
+        And start dominating on those fools. Haven't you ever wondered what it's like to Lebron James? Where life is so easy that you have to be the star <em>and</em> the coach at the same time just keep yourself challenged? Now's your chance.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer pagewidth">
+
+  <div class="grid">
+    <div class="grid-item xlarge--one-third xlarge--text-left">
+      Clone of <a href="https://github.com/Shopify/shopify.github.com">this</a>, by <a href="http://tylershambora.com">me</a>, in © 2017.
+    </div>
+    <div class="grid-item xlarge--one-third">
+      <a href="https://twitter.com/tshamz" class="twitter-link"><span class="under">Follow me</span> <i class="icon-twitter"></i></a>
+    </div>
+    <div class="grid-item xlarge--one-third xlarge--text-right">
+      Want to contribute? Too bad. <a href="https://www.donaldjtrump.com">Go find your own.</a>
+    </div>
+  </div>
+
+</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascripts/libs/modernizr.min.js"></script>
+    <script src="javascripts/libs/handlebars.min.js"></script>
+    <script src="javascripts/libs/isotope.min.js"></script>
+    <script src="javascripts/custom-repos.js"></script>
+    <script src="javascripts/shopify-opensource.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-49178120-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','_gaUTracker');
+
+      _gaUTracker('create', 'UA-82702-49', {
+        cookieDomain: 'shopify.com',
+        legacyCookieDomain: 'shopify.com'
+      });
+      _gaUTracker('send', 'pageview');
+    </script>
+
+    </body>
+</html>
