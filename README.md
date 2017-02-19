@@ -1,4 +1,4 @@
-Shopify Open Source
+Shopify Open Source Clone
 =====================
 
 Shopify's Open Source page is build with [Jekyll](http://jekyllrb.com/) and [Sass](http://sass-lang.com/) and hosted on [GitHub Pages](http://pages.github.com/).
