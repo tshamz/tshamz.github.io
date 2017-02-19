@@ -17,7 +17,7 @@ if (!Array.prototype.indexOf) {
 
 window.SHOPIFYTIMBER = window.SHOPIFYTIMBER || {};
 
-jQuery(function($){
+jQuery(function ($) {
 
   // requires jQuery 1.8
   (function ( app, undefined ) {
