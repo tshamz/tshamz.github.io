@@ -48,7 +48,7 @@ var customRepoLanguage = {
 var customRepoAvatar = {
   'asana-bug-reporter-extension': '/images/repo-avatars/chrome-extensions.png',
   'asana-comment-filler-inner': '/images/repo-avatars/chrome-extensions.png',
-  'wtfdrink': '/images/repo-avatars/wtfdrink.png`',
+  'wtfdrink': '/images/repo-avatars/wtfdrink.png',
   'tylershambora.com': '/images/repo-avatars/tylershambora.com.png',
   'socket-to-me-baby': '/images/repo-avatars/socket-to-me-baby.png'
 }
