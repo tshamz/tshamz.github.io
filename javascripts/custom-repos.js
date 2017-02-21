@@ -1,33 +1,30 @@
 // Opt-in repos (case sensitive)
-// - These are all children of BVAccel and visible at https://github.com/bvaccel
+// - These are all children of BVAccel and visible at https://github.com/tshamz
 var optInRepos = [
-  'jamesbrown',
-  'css',
-  'javascript'
+  'wtfdrink',
+  'time-is-a-flat-circle',
+  'a11y-mooc',
+  'code-standards',
+  'qa-checklist',
+  'the-gauntlet',
+  'andersoncooper',
+  'brianwilliams',
+  'asana-bug-reporter-extension',
+  'asana-comment-filler-inner',
+  'wtfdrink',
+  'tylershambora.com',
+  'socket-to-me-baby',
+  'free-marketplace-music',
+  'gulp-shopify-upload-with-callbacks',
+  'shopify-frankenstein',
+  'angular-grade-calculator',
+  'ad-hoc-product-exporter',
+  'postcss-shopify-settings-variables',
+  'up-down-left-right'
 ]
 
 // Add custom repos by full_name. Take the org/user and repo name
 var customRepos = [
-  'tshamz/wtfdrink',
-  'tshamz/time-is-a-flat-circle',
-  'tshamz/a11y-mooc',
-  'tshamz/code-standards',
-  'tshamz/qa-checklist',
-  'tshamz/the-gauntlet',
-  'tshamz/andersoncooper',
-  'tshamz/brianwilliams',
-  'tshamz/asana-bug-reporter-extension',
-  'tshamz/asana-comment-filler-inner',
-  'tshamz/wtfdrink',
-  'tshamz/tylershambora.com',
-  'tshamz/socket-to-me-baby',
-  'tshamz/free-marketplace-music',
-  'tshamz/gulp-shopify-upload-with-callbacks',
-  'tshamz/shopify-frankenstein',
-  'tshamz/angular-grade-calculator',
-  'tshamz/ad-hoc-product-exporter',
-  'tshamz/postcss-shopify-settings-variables',
-  'tshamz/up-down-left-right'
 ]
 
 // Custom repo language, different than that defined by GitHub

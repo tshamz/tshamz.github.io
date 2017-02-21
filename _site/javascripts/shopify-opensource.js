@@ -60,7 +60,7 @@ jQuery(function ($) {
 
         if (this.$preventApiCalls) return false;
 
-        var uri = 'https://api.github.com/orgs/bvaccel/members?callback=?'
+        var uri = 'https://api.github.com/orgs/tshamz/members?callback=?'
                 + '&per_page='+perPage
                 + '&page='+page;
 
